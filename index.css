@@ -35,9 +35,54 @@ body {
   display: flex;
   margin: 5px;
   margin-bottom: 0px;
-  margin-right: 100px;
   list-style: none;
 }
+
+.optionIcon{
+  height: 60px;
+  margin-right: 10px;
+  width: 90px;
+}
+
+.optionImg{
+  padding: 10px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  visibility: hidden;
+}
+
+/* .optionImg:hover{
+  background-color: red;
+} */
+
+.nav-linkdup{
+  background-color: black;
+  border-radius: 10%;
+  margin: 0px;
+  padding-left: 0px;
+  overflow: hidden;
+  list-style: none;
+  visibility: hidden;
+
+}
+
+.nav-linkdup li{
+  color: white;
+  padding: 6px;
+  width: 75%;
+  margin: 3px;
+  border: 2px solid white;
+}
+
+.nav-linkdup a{
+  text-decoration: none;
+}
+.nav-linkdup li:hover{
+  background-color: white;
+  color: black;
+}
+
 
 .nav-link a {
   text-decoration: none;
@@ -77,16 +122,70 @@ z-index: 0;
 .body1{
   flex: 3;
   background-color: lightblue;
-  height: 80vh;
+  height: 500px;
   position: sticky;
   top: 98px;
   border: 3px solid black;
   border-radius: 2%;
-  overflow: hidden;
+  overflow-y: scroll;
 }
+
+.body2{
+  flex: 6;
+  background-color: lightblue; 
+  margin: 2px;
+  border: 3px solid black;
+  border-radius: 2%;
+  overflow: hidden;
+
+}
+
+.body3{
+  flex: 3;
+  border: 3px solid black;
+  border-radius: 2%;
+  background-color: lightblue;
+  height: 80vh;
+  position: sticky;
+  top: 98px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+}
+
+.body1::-webkit-scrollbar{
+  width: 5px;
+}
+
+@media only screen and (max-width: 780px) {
+  .mainbody{
+    flex-direction: column;
+  }
+  .nav-link{
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .body2{
+    position: relative;
+  }
+
+  .optionImg{
+    visibility: visible;
+    z-index: 1;
+  }
+
+  .optionIcon:hover .nav-linkdup{
+    visibility: visible;
+  }
+  
+}
+
+
 
 .educationList {
   list-style-type:square;
+  
 }
 .skillsList {
   list-style-type:circle;
@@ -102,16 +201,7 @@ z-index: 0;
   margin: 30px;
 }
 
-.body2{
-  flex: 6;
-  background-color: lightblue;    
-  width: 100px;
-  margin: 2px;
-  border: 3px solid black;
-  border-radius: 2%;
-  overflow: hidden;
 
-}
 .notify{
   text-align: center;
 }
@@ -144,18 +234,6 @@ z-index: 0;
   background-color: orange;
 }
 
-.body3{
-  border: 3px solid black;
-  border-radius: 2%;
-  flex: 3;
-  background-color: lightblue;
-  height: 80vh;
-  position: sticky;
-  top: 98px;
-  overflow: scroll;
-  overflow-x: hidden;
-
-}
 .body3::-webkit-scrollbar {
   width: 5px;
   overflow-x: hidden;
@@ -207,20 +285,6 @@ z-index: 0;
 } */
 
 
- /* @media only screen and (max-width: 1080px) {
-  .profilePic {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-    left: 307px;
-    right: 0;
-    top: 250px;
-    border: 3px solid orange;
-
-  }
-} */
 
 .objectives{
   color: orange;
